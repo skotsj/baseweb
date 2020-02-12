@@ -557,7 +557,7 @@ const InnerTableElement = React.forwardRef<
                       theme.direction !== 'rtl'
                         ? 0 - ctx.scrollLeft
                         : 'initial',
-                    left: theme.direction === 'rtl' ? 0 : 'initial',
+                    left: theme.direction !== 'rtl' ? 'initial' : 0,
                     top:
                       (ctx.rowHighlightIndex - 1) * ctx.rowHeight +
                       HEADER_ROW_HEIGHT,
